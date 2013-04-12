@@ -1,13 +1,14 @@
 There are two public repositories related to this:
 
-* https://github.com/hvolkmer/nova/tree/smartosfolsom
-* https://github.com/hvolkmer/openstack-smartos
+* https://github.com/dstroppa/openstack-smartos-nova-grizzly
+* https://github.com/dstroppa/openstack-smartos-bootstrap
 
+On the SmartOS machine execute:
 
-	imgadm update
+	imgadm update	
 	imgadm import f9e4be48-9466-11e1-bc41-9f993f5dff36
-	zfs snapshot zones/f9e4be48-9466-11e1-bc41-9f993f5dff36@now
-	zfs send zones/f9e4be48-9466-11e1-bc41-9f993f5dff36@now > /zones/workspace/smartos.img
+	zfs snapshot zones/f9e4be48-9466-11e1-bc41-9f993f5dff36@image	
+	zfs send zones/f9e4be48-9466-11e1-bc41-9f993f5dff36@image > /zones/workspace/smartos.img
 
 and then:
 
